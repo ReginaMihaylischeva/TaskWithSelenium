@@ -21,7 +21,8 @@ namespace Test
             if (coefficientA == 0)
             {
                 X1 = -coefficientC / coefficientB;
-                return $"X1 = {X1} \n X2 = {X1}";
+                Console.WriteLine("X1 = {0: 0.000000}", X1);
+                return $"X1 = {X1}";
             }
             else
             {

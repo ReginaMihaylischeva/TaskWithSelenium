@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\test\TestTask\TestTask\bin\Release\netcoreapp3.1\TestTask.exe
+C:\Users\User\Desktop\test\TestTask\TestTask\bin\Release\netcoreapp3.1\TestTask.deps.json
+C:\Users\User\Desktop\test\TestTask\TestTask\bin\Release\netcoreapp3.1\TestTask.runtimeconfig.json
+C:\Users\User\Desktop\test\TestTask\TestTask\bin\Release\netcoreapp3.1\TestTask.runtimeconfig.dev.json
+C:\Users\User\Desktop\test\TestTask\TestTask\bin\Release\netcoreapp3.1\TestTask.dll
+C:\Users\User\Desktop\test\TestTask\TestTask\bin\Release\netcoreapp3.1\TestTask.pdb
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.csprojAssemblyReference.cache
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.Properties.Resources.resources
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.csproj.GenerateResource.cache
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.AssemblyInfo.cs
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.dll
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.pdb
+C:\Users\User\Desktop\test\TestTask\TestTask\obj\Release\netcoreapp3.1\TestTask.genruntimeconfig.cache

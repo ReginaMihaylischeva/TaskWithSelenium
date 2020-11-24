@@ -1,0 +1,139 @@
+<script>data={"Date":"10.19.2020","CreditLimit":[["14990846  ","COMPANYNAME3  ","             0,00 ","  4 841 653,21 ","  4 841 653,21 "]],"Receivables":[["2000048238","3952167621      ","4515380165               ","\u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0442\u043E\u0432\u0430\u0440\u0430","12.02.2019","13.05.2019","  206 ","     2 518 472,74 ","RUB  ","3940024611                                        "],["2000234961","3952333160      ","4516251566               ","\u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0442\u043E\u0432\u0430\u0440\u0430","28.05.2019","26.08.2019","  101 ","     2 323 180,47 ","RUB  ","3940026140                                        "],["\u0418\u0442\u043E\u0433\u043E \u0441\u0443\u043C\u043C\u0430 \u0434\u0435\u0431\u0438\u0442\u043E\u0440\u0441\u043A\u043E\u0439 \u0437\u0430\u0434\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u0438 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F 14990846","     4 841 653,21 ","RUB  ",""]]}</script><!DOCTYPE html>
+<style>
+    @font-face {
+        font-family: Helvetica;
+        src: url(data:font/opentype;base64,@9202);
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: Helvetica;
+        src: url(data:font/opentype;base64,@9206);
+        font-weight: bold;
+    }
+
+    body {
+        letter-spacing: 1px;
+        font-family: Helvetica;
+    }
+</style>
+<html>
+<body>
+    <style>
+        TABLE {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        caption {
+            text-align: left;
+        }
+
+        hr {
+            border: none;
+            background-color: black;
+            color: black;
+            height: 2px;
+        }    
+    </style>
+
+        <table id="CreditLimit" width="100%" border="1" bordercolor="black" >
+        <caption > Кредитный лимит на 10.19.2020<hr > </caption >
+        <thead >
+        <tr style="font-size:small;" >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6" > Код покупателя</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Наименование</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Общий кредитный лимит</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Использованный кредитный лимит</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Остаток кредитного лимита (-) / Повышиение кредитнрго лимита (+)</th >
+
+        </tr >
+        </thead >
+        <tbody style="font-size:small" id="CreditLimit_body" > </tbody >
+        </table >
+        <br >
+
+        <style >    
+
+        TABLE {
+            border-collapse: collapse;
+            text-align: center;
+            width: 100%;
+        }
+
+        caption {
+            text-align: left;
+        }
+
+        hr {
+            border: none;
+            background-color: black;
+            color: black;
+            height: 2px;
+        }
+    </style>
+
+      <table border="1" bordercolor="black" id="Receivables" width="100%">
+          <caption>Дебиторская задолжность на 10.19.2020<hr></caption>
+          <thead>
+              <tr style="font-size:small;">
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Системный номер документа</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Счёт фактура</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Товарная накладная</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Тип операции</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Дата документа</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Дата платежа</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Дней просрочки</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Сумма</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Валюта</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Комментарий</th>
+              </tr>
+          </thead>
+          <tbody style="font-size:small" id="Receivables_body"></tbody>
+      </table>
+    <script>
+        for (key in data) {
+            if (document.getElementById(key) != null) {
+                if (Array.isArray(data[key])) {
+                    var body = document.getElementById(key).tBodies[0];
+                    for (item in data[key]) {
+                        var flag = false;
+                        var row = body.insertRow(-1);
+                        var check = 0;
+                        var bold_flag = false;
+                        for (it in data[key][item]) {
+                            check++;
+                            var total_flag = false;
+                            if (data[key][item][it].trim().toLowerCase().indexOf("итого") == 0) {
+                                total_flag = true;
+                                bold_flag = true;
+                            }
+                            var cell = row.insertCell();
+                            cell.innerHTML = data[key][item][it];
+                            console.log(data[key][item][it]);
+                            if (total_flag) {
+                                row.insertCell();
+                                cell.style.fontWeight = "bold";
+                                cell.setAttribute('colSpan', '6');
+                            }
+                            if (bold_flag) { cell.style.fontWeight = "bold"; }
+                            if (check == 7 && parseInt(data[key][item][6], 10) > 0) {
+                                cell.style.backgroundColor = "red";
+                            }
+                        }
+                    }
+                }
+                else {
+                    document.getElementById(key).innerHTML = data[key]
+                }
+            }
+        }
+    </script>
+    <script language="javascript">
+        if (document.getElementById("CreditLimit").tBodies[0].rows.length < 0)
+            document.getElementById("CreditLimit").style.display = "none";
+       if (document.getElementById("Receivables").tBodies[0].rows.length < 0)
+           document.getElementById("Receivables").style.display = "none";
+    </script>
+</body>
+    </html>

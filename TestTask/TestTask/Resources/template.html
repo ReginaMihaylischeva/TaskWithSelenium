@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<style>
+    @font-face {
+        font-family: Helvetica;
+        src: url(data:font/opentype;base64,@9202);
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: Helvetica;
+        src: url(data:font/opentype;base64,@9206);
+        font-weight: bold;
+    }
+
+    body {
+        letter-spacing: 1px;
+        font-family: Helvetica;
+    }
+</style>
+<html>
+<body>
+    <style>
+        TABLE {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        caption {
+            text-align: left;
+        }
+
+        hr {
+            border: none;
+            background-color: black;
+            color: black;
+            height: 2px;
+        }    
+    </style>
+
+        <table id="CreditLimit" width="100%" border="1" bordercolor="black" >
+        <caption > Кредитный лимит на @date<hr > </caption >
+        <thead >
+        <tr style="font-size:small;" >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6" > Код покупателя</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Наименование</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Общий кредитный лимит</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Использованный кредитный лимит</th >
+        <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000; background: #b0e0e6" > Остаток кредитного лимита (-) / Повышиение кредитнрго лимита (+)</th >
+
+        </tr >
+        </thead >
+        <tbody style="font-size:small" id="CreditLimit_body" > </tbody >
+        </table >
+        <br >
+
+        <style >    
+
+        TABLE {
+            border-collapse: collapse;
+            text-align: center;
+            width: 100%;
+        }
+
+        caption {
+            text-align: left;
+        }
+
+        hr {
+            border: none;
+            background-color: black;
+            color: black;
+            height: 2px;
+        }
+    </style>
+
+      <table border="1" bordercolor="black" id="Receivables" width="100%">
+          <caption>Дебиторская задолжность на @date<hr></caption>
+          <thead>
+              <tr style="font-size:small;">
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Системный номер документа</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Счёт фактура</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Товарная накладная</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Тип операции</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Дата документа</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Дата платежа</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Дней просрочки</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Сумма</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Валюта</th>
+                  <th style="padding-top: 0.7em;padding-bottom: 0.3em;text-align: center;border-bottom: 1px solid #000000;  background: #b0e0e6">Комментарий</th>
+              </tr>
+          </thead>
+          <tbody style="font-size:small" id="Receivables_body"></tbody>
+      </table>
+    <script>
+        for (key in data) {
+            if (document.getElementById(key) != null) {
+                if (Array.isArray(data[key])) {
+                    var body = document.getElementById(key).tBodies[0];
+                    for (item in data[key]) {
+                        var flag = false;
+                        var row = body.insertRow(-1);
+                        var check = 0;
+                        var bold_flag = false;
+                        for (it in data[key][item]) {
+                            check++;
+                            var total_flag = false;
+                            if (data[key][item][it].trim().toLowerCase().indexOf("итого") == 0) {
+                                total_flag = true;
+                                bold_flag = true;
+                            }
+                            var cell = row.insertCell();
+                            cell.innerHTML = data[key][item][it];
+                            console.log(data[key][item][it]);
+                            if (total_flag) {
+                                row.insertCell();
+                                cell.style.fontWeight = "bold";
+                                cell.setAttribute('colSpan', '6');
+                            }
+                            if (bold_flag) { cell.style.fontWeight = "bold"; }
+                            if (check == 7 && parseInt(data[key][item][6], 10) > 0) {
+                                cell.style.backgroundColor = "red";
+                            }
+                        }
+                    }
+                }
+                else {
+                    document.getElementById(key).innerHTML = data[key]
+                }
+            }
+        }
+    </script>
+    <script language="javascript">
+        if (document.getElementById("CreditLimit").tBodies[0].rows.length < 0)
+            document.getElementById("CreditLimit").style.display = "none";
+       if (document.getElementById("Receivables").tBodies[0].rows.length < 0)
+           document.getElementById("Receivables").style.display = "none";
+    </script>
+</body>
+    </html>
