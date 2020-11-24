@@ -12,7 +12,7 @@ namespace Test
             Calculations(coefficientA, coefficientB, coefficientC);
         }
 
-        static public string Calculations(double coefficientA, double coefficientB, double coefficientC)
+        static public int Calculations(double coefficientA, double coefficientB, double coefficientC)
         {
             double D = 0;
             double X1 = 0;
@@ -22,7 +22,7 @@ namespace Test
             {
                 X1 = -coefficientC / coefficientB;
                 Console.WriteLine("X1 = {0: 0.000000}", X1);
-                return $"X1 = {X1}";
+                return 0;
             }
             else
             {
@@ -33,17 +33,17 @@ namespace Test
                     X2 = (-coefficientB - Math.Sqrt(D)) / (2 * coefficientA);
                     Console.WriteLine("X1 = {0: 0.000000}", X1);
                     Console.WriteLine("X2 = {0: 0.000000}", X2);
-                    return $"X1 = {X1} \n X2 = {X2}";
+                    return 0;
                 }
                 if (D == 0)
                 {
                     X1 = (-coefficientB + Math.Sqrt(D)) / (2 * coefficientA);
                     Console.WriteLine("X1 = {0: 0.000000}", X1);
                     Console.WriteLine("X2 = {0: 0.000000}", X1);
-                    return $"X1 = {X1} \n X2 = {X1}";
+                    return 0;
                 }
                 Console.WriteLine("Discriminant less than zero.");
-                return "Discriminant less than zero.";
+                return 1;
             }
         }
 
